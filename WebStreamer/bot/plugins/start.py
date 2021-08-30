@@ -10,49 +10,51 @@ from pyrogram.errors import UserNotParticipant
 db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
 
 START_TEXT = """
-<i>👋 Hᴇʏ,</i>{}\n
-<i>I'ᴍ Tᴇʟᴇɢʀᴀᴍ Fɪʟᴇs Sᴛʀᴇᴀᴍɪɴɢ Bᴏᴛ ᴀs ᴡᴇʟʟ Dɪʀᴇᴄᴛ Lɪɴᴋs Gᴇɴᴇʀᴀᴛᴇ</i>\n
-<i>Cʟɪᴄᴋ ᴏɴ Hᴇʟᴘ ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</i>\n
-<i><u>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u></i>
-<b>🔞 Pʀᴏɴ ᴄᴏɴᴛᴇɴᴛꜱ ʟᴇᴀᴅꜱ ᴛᴏ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ ʏᴏᴜ.</b>\n\n
-<i><b>🍃 Bᴏᴛ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :</b>@AvishkarPatil</i>"""
+● سلام به ربات اپلودر قدرتمند فایل خوش امدید.
+این ربات بیش از 50 هزار کاربر دارد امیدوارم از استفاده از ربات لذت ببرید
+
+• مسئولیت فایل های اپلود شده توسط کاربران بر عهده برنامه نویس ربات نمیباشد و مسئولیت فایل ها بر عهده اپلود کننده ان است!
+
+
+• به راحتی انواع فایل خود را در 1 ثانیه به لینک مستقیم تبدیل و دانلود کنید!
+• برای شروع فایل خود را به ربات ارسال کنید.
+"""
 
 HELP_TEXT = """
-<i>- Sᴇɴᴅ ᴍᴇ ᴀɴʏ ꜰɪʟᴇ (ᴏʀ) ᴍᴇᴅɪᴀ ꜰʀᴏᴍ ᴛᴇʟᴇɢʀᴀᴍ.</i>
-<i>- I ᴡɪʟʟ ᴘʀᴏᴠɪᴅᴇ ᴇxᴛᴇʀɴᴀʟ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ !.</i>
-<i>- Aᴅᴅ Mᴇ ɪɴ ʏᴏᴜʀ Cʜᴀɴɴᴇʟ Fᴏʀ Dɪʀᴇᴄᴛ Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋs Bᴜᴛᴛᴏɴ</i>
-<i>- Tʜɪs Pᴇʀᴍᴇᴀɴᴛ Lɪɴᴋ Wɪᴛʜ Fᴀsᴛᴇsᴛ Sᴘᴇᴇᴅ</i>\n
-<u>🔸 𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u>\n
-<b>🔞 Pʀᴏɴ ᴄᴏɴᴛᴇɴᴛꜱ ʟᴇᴀᴅꜱ ᴛᴏ ᴘᴇʀᴍᴀɴᴇɴᴛ ʙᴀɴ ʏᴏᴜ.</b>\n
-<i>Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ (ᴏʀ) ʀᴇᴘᴏʀᴛ ʙᴜɢꜱ</i> <b>: <a href='https://t.me/Avishkarpatil'>[ ᴄʟɪᴄᴋ ʜᴇʀᴇ ]</a></b>"""
+● به قسمت راهنمای ربات خوش امدید.
+• برای اپلود فایل و دریافت لینک مستقیم دانلود فایل، فایل خود را برای ربات ارسال کنید
+
+• بعد از ارسال فایل شما در کمتر از 1 ثانیه  لینک فایل اپلود شده  خود را دریافت میکنید
+
+• دانلود ها قابلیت ایست و ادامه را دارند.
+• برای دانلود فایل می توانید از نرم افزار های مدیریت دانلود مانند اینترنت دانلود منتیجر استفاه کنید.
+"""
 
 ABOUT_TEXT = """
-<b>⚜ Mʏ ɴᴀᴍᴇ : FileStreamX</b>\n
-<b>🔸Vᴇʀꜱɪᴏɴ : <a href='https://telegram.me/AvishkarPatil'>3.0.1</a></b>\n
-<b>🔹Sᴏᴜʀᴄᴇ : <a href='https://github.com/avipatilpro/FileStreamBot'>Cʟɪᴄᴋ Hᴇʀᴇ</a></b>\n
-<b>🔸GitHub : <a href='https://GitHub.com/avipatilpro'>Fᴏʟʟᴏᴡ</a></b>\n
-<b>🔹Dᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://telegram.me/Avishkarpatil'>Aᴠɪsʜᴋᴀʀ Pᴀᴛɪʟ</a></b>\n
-<b>🔸Lᴀꜱᴛ ᴜᴘᴅᴀᴛᴇᴅ : <a href='https://telegram.me/AvishkarPatil'>[ 11-ᴊᴜʟʏ-21 ] 04:35 PM</a></b>"""
+● به قسمت درباره ما  خوش امدید.
+• نویسنده ربات: 
+@m_mahdihajizadeh
+"""
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('راهنما', callback_data='help'),
+        InlineKeyboardButton('درباره ما', callback_data='about'),
+        InlineKeyboardButton('بستن', callback_data='close')
         ]]
     )
 HELP_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('منوی اصلی', callback_data='home'),
+        InlineKeyboardButton('درباره ما', callback_data='about'),
+        InlineKeyboardButton('بستن', callback_data='close')
         ]]
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Hᴏᴍᴇ', callback_data='home'),
-        InlineKeyboardButton('Hᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton('منوی اصلی', callback_data='home'),
+        InlineKeyboardButton('راهنما', callback_data='help'),
+        InlineKeyboardButton('بستن', callback_data='close')
         ]]
     )
 
@@ -184,13 +186,11 @@ async def start(b, m):
                                      get_msg.message_id)
 
         msg_text ="""
-<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>\n
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>\n
-<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>\n
-<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>\n
-<b>🚸 Nᴏᴛᴇ : Lɪɴᴋ ᴇxᴘɪʀᴇᴅ ɪɴ 24 ʜᴏᴜʀꜱ</b>\n
-<i>🍃 Bᴏᴛ Mᴀɪɴᴛᴀɪɴᴇᴅ Bʏ :</i> <b>@AvishkarPatil</b>
-"""
+<i><u>فایل شما اپلود شد !</u></i>\n
+<b>📂 نام فایل :</b> <i>{}</i>\n
+<b>📦 حجم فایل :</b> <i>{}</i>\n
+<b>📥 لینک دانلود :</b> <i>{}</i>\n
+<b>🚸 لینک دانلود فایل منقضی نمی شود</b>"""
 
         await m.reply_text(
             text=msg_text.format(file_name, file_size, stream_link),
