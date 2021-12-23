@@ -60,7 +60,7 @@ async def private_receive_handler(c: Client, m: Message):
             file_name = f"{m.audio.file_name}"
 
 
-        stream_link = "https://{}/{}/{}".format(Var.FQDN, m.audio.file_name, log_msg.message_id) if Var.ON_HEROKU or Var.NO_PORT else \
+        stream_link = "https://{}/{}/{}".format(Var.FQDN, log_msg.message_id, m.audio.file_name) if Var.ON_HEROKU or Var.NO_PORT else \
             "http://{}:{}/{}".format(Var.FQDN,
                                     Var.PORT,
                                     log_msg.message_id)
@@ -110,7 +110,7 @@ async def channel_receive_handler(bot, broadcast):
         return
     try:
         log_msg = await broadcast.forward(chat_id=Var.BIN_CHANNEL)
-        stream_link = "https://{}/{}".format(Var.FQDN, log_msg.message_id) if Var.ON_HEROKU or Var.NO_PORT else \
+        stream_link = "https://{}/{}/{}".format(Var.FQDN, log_msg.message_id, m.audio.file_name) if Var.ON_HEROKU or Var.NO_PORT else \
             "http://{}:{}/{}".format(Var.FQDN,
                                     Var.PORT,
                                     log_msg.message_id)
