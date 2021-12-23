@@ -60,7 +60,7 @@ async def private_receive_handler(c: Client, m: Message):
             file_name = f"{m.audio.file_name}"
 
 
-        stream_link = "https://{}/{}".format(Var.FQDN, (log_msg.message_id + m.audio.file_name)) if Var.ON_HEROKU or Var.NO_PORT else \
+        stream_link = "https://{}/{}".format(Var.FQDN, m.audio.file_name) if Var.ON_HEROKU or Var.NO_PORT else \
             "http://{}:{}/{}".format(Var.FQDN,
                                     Var.PORT,
                                     log_msg.message_id)
