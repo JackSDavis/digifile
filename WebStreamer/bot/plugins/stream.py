@@ -36,7 +36,7 @@ async def private_receive_handler(c: Client, m: Message):
                 chat_id=m.chat.id,
                 text="""<i>برای استفاده از ربات لطفا ابتدا در کانال اطلاع رسانی آپدیت های ربات عضو شوید تا از امکانات فوق العاده و بروزرسانی های ربات  مطلع شوید.</i>""",
                 reply_markup=InlineKeyboardMarkup(
-                    [[ InlineKeyboardButton("Jᴏɪɴ ɴᴏᴡ 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}") ]]
+                    [[ InlineKeyboardButton("عضویت", url=f"https://t.me/{Var.UPDATES_CHANNEL}") ]]
                 ),
                 parse_mode="HTML"
             )
