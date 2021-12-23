@@ -49,16 +49,7 @@ async def private_receive_handler(c: Client, m: Message):
                 disable_web_page_preview=True)
             return
     try:
-        log_msg = await m.forward(chat_id=Var.BIN_CHANNEL)
-        
-        file_name = None
-        if m.video:
-            file_name = f"{m.video.file_name}"
-        elif m.document:
-            file_name = f"{m.document.file_name}"
-        elif m.audio:
-            file_name = f"{m.audio.file_name}"
-            
+        log_msg = await m.forward(chat_id=Var.BIN_CHANNEL) 
             stream_link = "https://{}/{}".format(Var.FQDN, log_msg.message_id) if Var.ON_HEROKU or Var.NO_PORT else \
             "http://{}:{}/{}".format(Var.FQDN,
                                     Var.PORT,
