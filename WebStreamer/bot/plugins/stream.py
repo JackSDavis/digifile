@@ -34,7 +34,7 @@ async def private_receive_handler(c: Client, m: Message):
         except UserNotParticipant:
             await c.send_message(
                 chat_id=m.chat.id,
-                text="""<i>برای استفاده از ربات لطفا ابتدا در کانال اطلاع رسانی آپدیت های ربات عضو شوید تا از امکانات فوق العاده و بروزرسانی های ربات  مطلع شوید.</i>""",
+                text="""برای استفاده از ربات لطفا ابتدا در کانال اطلاع رسانی آپدیت های ربات عضو شوید تا از امکانات فوق العاده و بروزرسانی های ربات  مطلع شوید.""",
                 reply_markup=InlineKeyboardMarkup(
                     [[ InlineKeyboardButton("عضویت", url=f"https://t.me/{Var.UPDATES_CHANNEL}") ]]
                 ),
